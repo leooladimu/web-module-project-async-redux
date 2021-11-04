@@ -3,23 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'
-import reducer from './reducers';
+
 import App from './App';
-import logger from 'redux-logger';
+import { reducer } from './reducers';
 import thunk from 'redux-thunk';
 
 
 const store = createStore(reducer, applyMiddleware(thunk));
-
-reducer = (state, action) => {
-  switch(action.type) {
-
-  }
-}
-
+const rootElement = document.getElementById('root');
 ReactDOM.render(
-  <Provider store = {store}>
-      <App/>
-  </Provider>,
-  document.getElementById('root')
+    <Provider store = {store} >
+      <App />
+    </Provider>
+    , rootElement
 );
