@@ -2,14 +2,12 @@
 import './App.css'
 import React from 'react';
 
-
-
 function App() {
   return (
   <div>
       <header className="">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          E <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -25,3 +23,4 @@ function App() {
 }
 
 export default App;
+
